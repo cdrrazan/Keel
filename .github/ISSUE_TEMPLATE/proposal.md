@@ -1,11 +1,11 @@
 ---
 name: Proposal
-about: A new rule, template, chapter, or change to the kit's structure
+about: A new rule, template, chapter, or change to Keel's structure
 title: "proposal: "
 labels: proposal
 ---
 
-<!-- The kit's value is its smallness. Every addition fights for space in a file agents
+<!-- Keel's value is its smallness. Every addition fights for space in a file agents
      actually read — so proposals carry the burden of proof. -->
 
 **The friction this resolves** (what goes wrong today without it — be concrete):

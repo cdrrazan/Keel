@@ -1,6 +1,6 @@
 # 4. The two ledgers
 
-This is the core of the kit — and `falsified.md` is the part **no other framework has**. spec-kit, Kiro,
+This is the core of Keel — and `falsified.md` is the part **no other framework has**. spec-kit, Kiro,
 ADR, MADR all record what you *decided*. None records what you *killed*. That's the exact memory an agent
 lacks, so it's the highest-leverage file here.
 

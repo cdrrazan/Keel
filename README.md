@@ -153,8 +153,8 @@ or read it chapter by chapter here:
 
 ## Contributing
 
-Keel eats its own dog food: decisions about the kit live in [`docs/decisions.md`](docs/decisions.md),
-proposals carry the burden of proof, and additions need a demonstrated friction they resolve — the kit's
+Keel eats its own dog food: decisions about it live in [`docs/decisions.md`](docs/decisions.md),
+proposals carry the burden of proof, and additions need a demonstrated friction they resolve — Keel's
 value is its smallness. Start with [CONTRIBUTING.md](CONTRIBUTING.md); the most valuable thing you can
 send is an [experience report](.github/ISSUE_TEMPLATE/experience-report.md) from actually adopting it.
 CI keeps internal links honest and enforces the ~200-line budget on `AGENTS.md`.

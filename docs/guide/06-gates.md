@@ -37,7 +37,7 @@ enforcement.** They're loaded as instructions the agent *usually* follows — co
 An agent can ignore a line in a Markdown file.
 
 To make a gate a **hard** constraint, you need a **[PreToolUse hook](https://code.claude.com/docs/en/hooks)**
-— code that runs before a tool call and can *block* it. This kit ships an optional example in
+— code that runs before a tool call and can *block* it. Keel ships an optional example in
 [`.claude/hooks/`](../../.claude/hooks/) that blocks commits by an agent, enforcing the edit gate's "the
 human authors every commit" rule for real.
 

@@ -1,6 +1,6 @@
 # 2. The 15 principles
 
-The whole philosophy, one line each. Everything else in this kit is an implementation of one of these.
+The whole philosophy, one line each. Everything else in Keel is an implementation of one of these.
 
 1. **Instructions live in tiers** — global rules, a project map, subsystem extras. → [ch. 3](03-kernel.md), [ch. 8](08-adoption.md)
 2. **Confused → stop and ask. Problem report → diagnose, don't edit.** → [ch. 6](06-gates.md)

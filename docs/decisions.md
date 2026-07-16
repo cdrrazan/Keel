@@ -29,7 +29,7 @@ rejected "why" stand. Full rationale in the guide:
 ---
 
 <!--
-The entries below are THIS repo's real decisions — the kit eats its own dog food (see CONTRIBUTING.md).
+The entries below are THIS repo's real decisions — Keel eats its own dog food (see CONTRIBUTING.md).
 When you copy this file into your own project, delete them and start empty. Fill forward; never backfill.
 -->
 
@@ -42,7 +42,7 @@ Revisit if: Claude Code gains native AGENTS.md support (tracked in anthropics/cl
 
 ## 2026-07-15 — One flat decisions.md over numbered ADR files
 Status: accepted
-Because: The kit optimizes for the smallest thing a solo dev or small team will actually maintain; one file with dated entries has near-zero ceremony.
+Because: Keel optimizes for the smallest thing a solo dev or small team will actually maintain; one file with dated entries has near-zero ceremony.
 Rejected docs/decisions/NNNN-*.md (MADR-style) because: Numbering, cross-file supersede links, and tooling are weight most adopters won't carry — and the format above borrows MADR's useful fields (Status, Consequences) anyway.
 Consequences: Very decision-heavy teams may outgrow the flat file; the guide (ch. 4) documents graduating to numbered ADRs when that hurts.
 Revisit if: Entries regularly exceed ~50 and searching/superseding in one file becomes the friction.

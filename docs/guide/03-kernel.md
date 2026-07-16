@@ -14,7 +14,7 @@ your-repo/
     └── falsified.md   # ideas killed
 ```
 
-That's it. Version control you already have. A README you probably have. Everything else in this kit —
+That's it. Version control you already have. A README you probably have. Everything else in Keel —
 roles, hooks, evals, the `docs/ai` and `docs/plans` split — is **growth**, not kernel. Don't add it on
 day one.
 

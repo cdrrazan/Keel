@@ -1,6 +1,6 @@
 ---
 name: Experience report
-about: You adopted the kit — tell us what worked and what failed
+about: You adopted Keel — tell us what worked and what failed
 title: "report: "
 labels: experience-report
 ---
