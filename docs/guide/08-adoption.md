@@ -50,7 +50,9 @@ that last one.
 - **`AGENTS.md` is canonical** — it's an [open, tool-neutral standard](https://agents.md/) adopted across
   Codex, Cursor, Amp, and more. Put your real instructions there.
 - **`CLAUDE.md` is a stub** that imports it via `@AGENTS.md`. Claude Code reads `CLAUDE.md`, not
-  `AGENTS.md`, so the stub is how you avoid maintaining two copies.
+  `AGENTS.md`, so the stub is how you avoid maintaining two copies. This isn't a workaround anymore —
+  it's the interop pattern [Anthropic's own memory docs](https://code.claude.com/docs/en/memory)
+  recommend (a symlink also works if you have no Claude-specific notes to add below the import).
 - **Keep it short.** Official guidance: under ~200 lines, or agents start ignoring the tail. Add a rule
   only when you'd otherwise have to re-explain it.
 
