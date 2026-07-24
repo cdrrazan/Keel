@@ -546,7 +546,7 @@
   <div class="rule-quote"><span class="tag">Evidence rule</span><p>A claim about the code that doesn't trace to a <strong>fresh read</strong> is labelled <code>unverified</code>. No silent failures. For any pass/fail claim: the raw output — the command run and what it returned.</p></div>
 
   <h3>From advice to enforcement</h3>
-  <p>The honest catch: <strong>AGENTS.md is context, not enforcement.</strong> An agent usually follows it; compliance isn't guaranteed. To make a gate a hard constraint, use a <a href="https://code.claude.com/docs/en/hooks">PreToolUse hook</a> — a check that runs before a tool call and can block it. A ten-line script that rejects any <code>git commit</code> or <code>git push</code> from an agent turns "the human authors every commit" from a request into a rule the tooling enforces.</p>
+  <p>The honest catch: <strong>AGENTS.md is context, not enforcement.</strong> An agent usually follows it; compliance isn't guaranteed. To make a gate a hard constraint, use a <a href="https://code.claude.com/docs/en/hooks">PreToolUse hook</a> — a check that runs before a tool call and can block it. Keel ships a working example — a script that denies any <code>git commit</code> or <code>git push</code> from an agent, plus the settings snippet that registers it — in <a href="https://github.com/cdrrazan/Keel/tree/main/.claude/hooks"><code>.claude/hooks/</code></a>, turning "the human authors every commit" from a request into a rule the tooling enforces.</p>
   <p><strong>Adopt hooks last.</strong> Start with the gates as written rules; add enforcement once the team trusts the discipline. Enforcement added before trust just feels like the tool fighting you.</p>
 </section>
 
@@ -598,7 +598,7 @@
   <p>They don't collide: let spec-kit own <code>.specify/</code> and its per-feature specs; let this playbook own <code>AGENTS.md</code> and the two ledgers. A spec-kit <em>constitution</em> states principles up front; <code>decisions.md</code> records choices as you go; <code>falsified.md</code> records what you ruled out — and nothing else offers that last one.</p>
 
   <h3>AGENTS.md and CLAUDE.md</h3>
-  <p><a href="https://agents.md/"><code>AGENTS.md</code></a> is the canonical, tool-neutral standard (adopted by Codex, Cursor, Amp, and more) — put your real instructions there. <code>CLAUDE.md</code> is a stub importing it via <code>@AGENTS.md</code>, since Claude Code reads its own file. And keep it <strong>under ~200 lines</strong> — past that, agents start ignoring the tail. Add a rule only when you'd otherwise re-explain it.</p>
+  <p><a href="https://agents.md/"><code>AGENTS.md</code></a> is the canonical, tool-neutral standard (adopted by Codex, Cursor, Amp, and more) — put your real instructions there. <code>CLAUDE.md</code> is a stub importing it via <code>@AGENTS.md</code>, since Claude Code reads its own file — the interop pattern <a href="https://code.claude.com/docs/en/memory">Anthropic's memory docs</a> officially recommend. And keep it <strong>under ~200 lines</strong> — past that, agents start ignoring the tail. Add a rule only when you'd otherwise re-explain it.</p>
 </section>
 
 <footer>
