@@ -26,6 +26,12 @@ All notable changes to Keel are recorded here. The format follows
   entries are proposed claims ratified at commit, and that a rejected rationale is superseded explicitly.
 
 ### Changed
+- **Refreshed external references** (verified 2026-11-17): Claude Code v2.1.277+ now reads `AGENTS.md`
+  natively, and anthropics/claude-code#6235 is closed. The `CLAUDE.md` stub stays in the kernel (now
+  optional) — with a new landmine documented: once any `CLAUDE.md` exists, Claude reads *only*
+  `CLAUDE.md` files, so the stub must import `@AGENTS.md`. Updated README, adoption chapter, web guide,
+  and research analysis (also: spec-kit's `/speckit-*` command namespace; AGENTS.md repo traction).
+  New decision entry (`proposed`) in `docs/decisions.md`. Hook interface re-checked: unchanged.
 - Standardized the project name to **Keel** across the guide, README, web guide, and templates.
 - **Refreshed Anthropic references** (verified 2026-07): the `CLAUDE.md` → `@AGENTS.md` import stub is
   now the interop pattern officially documented in Anthropic's memory docs, not just a community

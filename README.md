@@ -87,7 +87,7 @@ project so the robots stay fast **and** the castle stays standing.
 ```
 .
 ├── AGENTS.md              # canonical rules an agent reads before touching anything
-├── CLAUDE.md              # stub that imports AGENTS.md (Claude Code reads this)
+├── CLAUDE.md              # stub that imports AGENTS.md (optional on Claude Code v2.1.277+)
 ├── docs/
 │   ├── decisions.md       # ledger of choices made — dated, with "revisit if"
 │   ├── falsified.md       # ledger of ideas KILLED — the piece nothing else has
@@ -145,6 +145,8 @@ Keel's whole philosophy collapses into five:
 No big-bang migration. Everything here is additive. And the `CLAUDE.md` → `@AGENTS.md` stub isn't a
 workaround: it's the interop pattern [Anthropic's own memory docs](https://code.claude.com/docs/en/memory)
 recommend, so Claude Code and every AGENTS.md-native tool (Codex, Cursor, Amp, …) read the same rules.
+Claude Code v2.1.277+ also reads `AGENTS.md` natively when no `CLAUDE.md` exists — but if you keep a
+`CLAUDE.md`, it **must** import `@AGENTS.md`, because Claude then reads `CLAUDE.md` files only.
 
 ## See it filled in
 

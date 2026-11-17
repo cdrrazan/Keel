@@ -50,10 +50,14 @@ that last one.
 
 - **`AGENTS.md` is canonical** — it's an [open, tool-neutral standard](https://agents.md/) adopted across
   Codex, Cursor, Amp, and more. Put your real instructions there.
-- **`CLAUDE.md` is a stub** that imports it via `@AGENTS.md`. Claude Code reads `CLAUDE.md`, not
-  `AGENTS.md`, so the stub is how you avoid maintaining two copies. This isn't a workaround anymore —
-  it's the interop pattern [Anthropic's own memory docs](https://code.claude.com/docs/en/memory)
-  recommend (a symlink also works if you have no Claude-specific notes to add below the import).
+- **`CLAUDE.md` is a stub** that imports it via `@AGENTS.md` — the interop pattern
+  [Anthropic's own memory docs](https://code.claude.com/docs/en/memory) recommend (a symlink also works
+  if you have no Claude-specific notes to add below the import).
+- **Claude Code now reads `AGENTS.md` natively** (v2.1.277+, verified 2026-11): with no `CLAUDE.md`
+  present, it uses `AGENTS.md` directly. **Landmine:** the default is *either/or* — once *any*
+  `CLAUDE.md` exists, Claude reads **only** the `CLAUDE.md` files and ignores `AGENTS.md`. So if you
+  keep a `CLAUDE.md` (for Claude-specific notes, or for older Claude Code versions), it **must** import
+  `@AGENTS.md` or your rules silently vanish. The stub is now optional, but never half-present.
 - **Keep it short.** Official guidance: under ~200 lines, or agents start ignoring the tail. Add a rule
   only when you'd otherwise have to re-explain it.
 

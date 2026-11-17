@@ -6,7 +6,7 @@
 layered (public + internal) guidebook built from it contain?
 **Method:** Multi-source web research, adversarial 3-vote verification per claim. 61 claims
 extracted across 30 primary sources; all 61 survived verification (74/75 votes high-confidence).
-**Date:** 2026-07-15
+**Date:** 2026-07-15 (AGENTS.md / CLAUDE.md and spec-kit facts refreshed 2026-11-17)
 
 ---
 
@@ -52,7 +52,9 @@ ship as a clone-and-run starter template whose README is the guide.
   (Copilot, Claude Code, Gemini, Codex).
   [[spec-kit repo]](https://github.com/github/spec-kit) · [[GitHub blog]](https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/)
 - **Workflow:** a fixed sequence of slash commands — `constitution → specify → plan → tasks → implement`,
-  plus `clarify`, `analyze`, `checklist` for refinement/validation.
+  plus `clarify`, `analyze`, `checklist` for refinement/validation. *(Nov 2026 note: commands are now
+  namespaced `/speckit-*` — e.g. `/speckit-specify` — and the README adds optional bug-fix and
+  idea-assessment extensions; the refinement steps moved to its SDD walkthrough, `unverified` here.)*
   [[spec-driven.md]](https://github.com/github/spec-kit/blob/main/spec-driven.md)
 - **What it puts in the repo:** a `.specify/` directory (`memory/constitution.md`, scripts, templates)
   and per-feature `specs/[feature]/` folders with `spec.md`, `plan.md`, `tasks.md`, `data-model.md`,
@@ -82,15 +84,17 @@ ship as a clone-and-run starter template whose README is the guide.
 
 - **AGENTS.md** is a single open, MIT-licensed, tool-neutral Markdown standard — a "README for agents"
   holding **operational** guidance (dev environment, testing, PR/pre-commit rules), *not* product specs
-  or decision history. Strong traction (~23k stars / ~1.7k forks on the reference repo); adopted by
+  or decision history. Strong traction (~25.5k stars / ~2.0k forks on the reference repo as of Nov 2026); adopted by
   Codex, Amp, Cursor, and others.
   [[agents.md]](https://agents.md/) · [[repo]](https://github.com/agentsmd/agents.md)
 - **CLAUDE.md** is Anthropic's canonical persistent-context file — loaded every session, checked into
-  git, holding bash commands, code style, workflow rules, architectural decisions. Claude Code reads
-  *CLAUDE.md, not AGENTS.md*; the interop pattern is a `CLAUDE.md` that imports `@AGENTS.md`
-  (or a symlink) — as of mid-2026 that pattern is *officially documented* in Anthropic's memory docs,
-  with Claude-specific notes allowed below the import. The community request for native AGENTS.md
-  support remains open (opened Aug 2025; still open as of Jul 2026).
+  git, holding bash commands, code style, workflow rules, architectural decisions. The interop pattern
+  is a `CLAUDE.md` that imports `@AGENTS.md` (or a symlink) — *officially documented* in Anthropic's
+  memory docs, with Claude-specific notes allowed below the import. **Update (verified 2026-11):**
+  Claude Code v2.1.277+ reads `AGENTS.md` natively, but only when no `CLAUDE.md`/`CLAUDE.local.md`
+  exists in the directory or above; if one does, it reads CLAUDE.md files only (configurable via the
+  *Project instructions* setting). The community request for native support (opened Aug 2025) is now
+  closed.
   [[memory docs]](https://code.claude.com/docs/en/memory) · [[issue #6235]](https://github.com/anthropics/claude-code/issues/6235)
 - **Two facts that directly shape the guidebook:**
   1. **These files are *context, not enforcement*.** Compliance is not guaranteed; to *hard-block* an

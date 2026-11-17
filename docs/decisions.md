@@ -68,6 +68,13 @@ Rejected keeping the root file blank because: A repo that preaches "fill the pro
 Consequences: README/guide copy instructions point at `templates/AGENTS.md`; the root file and the template can drift and must be reconciled deliberately.
 Revisit if: Adopters routinely copy the root file by mistake and ship Keel's project map into their repos.
 
+## 2026-11-17 — Keep the CLAUDE.md import stub despite native AGENTS.md support
+Status: proposed
+Because: The 2026-07-15 "revisit if" fired — Claude Code v2.1.277+ reads AGENTS.md natively — but only when no CLAUDE.md exists; once any CLAUDE.md is present it reads CLAUDE.md files only. A stub that imports `@AGENTS.md` is the one layout that works on every Claude Code version and still lets adopters add Claude-specific notes.
+Rejected deleting CLAUDE.md from the kernel because: Older Claude Code versions and non-default "Project instructions" settings still read CLAUDE.md only, and an adopter who later adds a CLAUDE.md without the import silently loses every rule.
+Consequences: The guide now states the stub is optional on v2.1.277+ but must import `@AGENTS.md` whenever it exists; the kernel stays four files.
+Revisit if: Claude Code reads AGENTS.md alongside CLAUDE.md by default, or the pre-2.1.277 install base becomes negligible.
+
 ## 2026-07-16 — Ledger entries are proposed until ratified by the commit
 Status: accepted
 Because: In agent-heavy repos a stale "why" is more dangerous than stale code, so entries need a single ratification point and an explicit supersede path — a rejected rationale must never stay authoritative.

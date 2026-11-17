@@ -488,7 +488,7 @@
   <p class="lede">The smallest thing that counts as "set up" — four files. Resist adding more until absence causes real friction.</p>
 <pre><code>your-repo/
 ├── <span class="g">AGENTS.md</span>          <span class="c"># the rules + the project map (canonical, tool-neutral)</span>
-├── <span class="g">CLAUDE.md</span>          <span class="c"># a stub that imports AGENTS.md — Claude Code reads this</span>
+├── <span class="g">CLAUDE.md</span>          <span class="c"># a stub that imports AGENTS.md — optional on Claude Code v2.1.277+</span>
 └── docs/
     ├── <span class="g">decisions.md</span>   <span class="c"># choices made — dated, with "revisit if"</span>
     └── <span class="g">falsified.md</span>   <span class="c"># ideas killed — mechanism and numbers</span></code></pre>
@@ -623,7 +623,7 @@
   <p>They don't collide: let spec-kit own <code>.specify/</code> and its per-feature specs; let this playbook own <code>AGENTS.md</code> and the two ledgers. A spec-kit <em>constitution</em> states principles up front; <code>decisions.md</code> records choices as you go; <code>falsified.md</code> records what you ruled out — and nothing else offers that last one.</p>
 
   <h3>AGENTS.md and CLAUDE.md</h3>
-  <p><a href="https://agents.md/"><code>AGENTS.md</code></a> is the canonical, tool-neutral standard (adopted by Codex, Cursor, Amp, and more) — put your real instructions there. <code>CLAUDE.md</code> is a stub importing it via <code>@AGENTS.md</code>, since Claude Code reads its own file — the interop pattern <a href="https://code.claude.com/docs/en/memory">Anthropic's memory docs</a> officially recommend. And keep it <strong>under ~200 lines</strong> — past that, agents start ignoring the tail. Add a rule only when you'd otherwise re-explain it.</p>
+  <p><a href="https://agents.md/"><code>AGENTS.md</code></a> is the canonical, tool-neutral standard (adopted by Codex, Cursor, Amp, and more) — put your real instructions there. <code>CLAUDE.md</code> is a stub importing it via <code>@AGENTS.md</code> — the interop pattern <a href="https://code.claude.com/docs/en/memory">Anthropic's memory docs</a> officially recommend. Claude Code now also reads <code>AGENTS.md</code> natively (v2.1.277+), but only when <em>no</em> <code>CLAUDE.md</code> exists: once one does, it reads <code>CLAUDE.md</code> files only — so a <code>CLAUDE.md</code> you keep <strong>must</strong> import <code>@AGENTS.md</code>, or your rules silently vanish. And keep it <strong>under ~200 lines</strong> — past that, agents start ignoring the tail. Add a rule only when you'd otherwise re-explain it.</p>
 </section>
 
 <footer>
